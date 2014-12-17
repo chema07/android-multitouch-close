@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -31,4 +32,31 @@ public class MainActivity extends ActionBarActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+    @Override
+    public boolean onTouchEvent(MotionEvent ev) {
+    	final int action = ev.getAction();
+    	
+        switch (action & MotionEvent.ACTION_MASK) {
+	        case MotionEvent.ACTION_DOWN: {
+	        	break;
+	        }
+	        case MotionEvent.ACTION_POINTER_DOWN: {
+	        	break;
+	        }
+	        case MotionEvent.ACTION_UP: {
+	        	break;
+	        }
+	        case MotionEvent.ACTION_POINTER_UP: {
+	        	break;
+	        }
+	        case MotionEvent.ACTION_MOVE: {
+	            break;
+	        }
+	        case MotionEvent.ACTION_CANCEL: {
+	        	break;
+	        }
+        }
+        return true;
+    }	
 }
